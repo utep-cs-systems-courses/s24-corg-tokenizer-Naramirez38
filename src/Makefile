@@ -7,7 +7,7 @@ all:tokenizer
 tokenizer: $(OBJS)
 	cc -o $(CFlags) $(OBJS)
 
-$(OBJS): tokenizer.h
+$(OBJS):tokenizer.h
 
 clean:
 	rm -f *.o tokenizer

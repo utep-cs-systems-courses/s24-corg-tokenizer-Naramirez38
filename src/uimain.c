@@ -11,7 +11,7 @@ int main()
   char str[maxin];
  
   puts("Hi welcome! just type some input for now \n" );
-  
+  // arrpoint commented out, might be segmentation faults cause
   //  *arrpoint = &str[0];//pointer str[0]
   //Put 1 inside while-loop to ensure no termination
 
