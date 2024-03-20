@@ -6,6 +6,9 @@
    ('\t' or ' ').  
    Zero terminators are not printable (therefore false) */
 int space_char(char c);
+/*Returns True (1) if is zero char False(0) if not
+*/
+int zero_char(char c);
 
 /* Return true (non-zero) if c is a non-whitespace 
    character (not tab or space).  
