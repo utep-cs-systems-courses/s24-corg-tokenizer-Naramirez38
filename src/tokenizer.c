@@ -49,5 +49,29 @@ char *token_start(char *str){
   return 0;
 }
 char *token_terminator(char *token){
+  while(non_space_char(*(token))){
+    token++;
+  }
+  if(!(zero_char(*(token)))){
+    return token;
+  }
   return 0;
  }
+
+int count_tokens(char *s){
+  int total = 0;
+  char &dif = s
+  if(zero_char(*(s))){
+    return 0;
+  }
+ top:
+  s = token_start(*(s));
+  if(((zero_char(*(s))) == 1) || (s == 0)){
+    return total
+      }
+  if(s != dif){
+    total++;
+    dif = s;
+  }
+  goto top;
+}
