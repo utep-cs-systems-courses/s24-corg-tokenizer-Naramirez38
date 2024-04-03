@@ -13,19 +13,24 @@ List* init_history(){
 void add_history(List *list, char *str){
   
   Item *item = malloc(sizeof(Item));
-  item->str = copy_str(str, strlen(str));
+  item->str = str;
   item->next = 0;
-  
+  int num_ = 0;
   if (list->root == 0) {
     item->id = 1;
     list->root = item;
   } else {
     Item *last = list->root;
+  another_one:
     while (last->next != 0) {
       last = last->next;
     }
     item->id = last->id + 1;
     last->next = item;
+    num_++;
+    if(*(str + num_) != '\0'){
+      goto another_one;
+    }
   }
 }
 
@@ -62,5 +67,4 @@ void free_history(List *list){
     free(item);
     item = next;
   }
-  free(list);
 }

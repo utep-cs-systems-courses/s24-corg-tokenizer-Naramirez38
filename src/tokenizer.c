@@ -145,7 +145,7 @@ char *copy_str(char *inStr, short len){
   return ostr;
 }
 
-int strlen(char *str){
+int str_len(char *str){
   
   int len = 0;
   while(non_space_char(*(str))){
@@ -166,7 +166,7 @@ char **tokenize(char* str){
       token = token_start(end);
       mark++;
     }
-    *(token_bunch + mark)= (copy_str("\0",1));
+    *(token_bunch + mark) = (copy_str("\0",1));
     return token_bunch;
 }
 

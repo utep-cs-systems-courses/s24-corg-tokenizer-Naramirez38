@@ -42,7 +42,7 @@ char *copy_str(char *inStr, short len);
 char **tokenize(char* str);
 
 /*finds len of token*/
-int strlen(char *str);
+int str_len(char *str);
 
 /* Prints all tokens. */
 void print_tokens(char **tokens);
